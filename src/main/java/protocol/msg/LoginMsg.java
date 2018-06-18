@@ -19,14 +19,14 @@ public final class LoginMsg {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>fixed32 username = 1;</code>
+     * <code>bytes username = 1;</code>
      */
-    int getUsername();
+    com.google.protobuf.ByteString getUsername();
 
     /**
-     * <code>fixed32 password = 2;</code>
+     * <code>bytes password = 2;</code>
      */
-    int getPassword();
+    com.google.protobuf.ByteString getPassword();
   }
   /**
    * Protobuf type {@code protocol.LoginReq}
@@ -41,8 +41,8 @@ public final class LoginMsg {
       super(builder);
     }
     private LoginReq() {
-      username_ = 0;
-      password_ = 0;
+      username_ = com.google.protobuf.ByteString.EMPTY;
+      password_ = com.google.protobuf.ByteString.EMPTY;
     }
 
     @Override
@@ -76,14 +76,14 @@ public final class LoginMsg {
               }
               break;
             }
-            case 13: {
+            case 10: {
 
-              username_ = input.readFixed32();
+              username_ = input.readBytes();
               break;
             }
-            case 21: {
+            case 18: {
 
-              password_ = input.readFixed32();
+              password_ = input.readBytes();
               break;
             }
           }
@@ -103,7 +103,7 @@ public final class LoginMsg {
       return LoginMsg.internal_static_protocol_LoginReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return LoginMsg.internal_static_protocol_LoginReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -111,20 +111,20 @@ public final class LoginMsg {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private int username_;
+    private com.google.protobuf.ByteString username_;
     /**
-     * <code>fixed32 username = 1;</code>
+     * <code>bytes username = 1;</code>
      */
-    public int getUsername() {
+    public com.google.protobuf.ByteString getUsername() {
       return username_;
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private int password_;
+    private com.google.protobuf.ByteString password_;
     /**
-     * <code>fixed32 password = 2;</code>
+     * <code>bytes password = 2;</code>
      */
-    public int getPassword() {
+    public com.google.protobuf.ByteString getPassword() {
       return password_;
     }
 
@@ -140,11 +140,11 @@ public final class LoginMsg {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (username_ != 0) {
-        output.writeFixed32(1, username_);
+      if (!username_.isEmpty()) {
+        output.writeBytes(1, username_);
       }
-      if (password_ != 0) {
-        output.writeFixed32(2, password_);
+      if (!password_.isEmpty()) {
+        output.writeBytes(2, password_);
       }
       unknownFields.writeTo(output);
     }
@@ -154,13 +154,13 @@ public final class LoginMsg {
       if (size != -1) return size;
 
       size = 0;
-      if (username_ != 0) {
+      if (!username_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(1, username_);
+          .computeBytesSize(1, username_);
       }
-      if (password_ != 0) {
+      if (!password_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(2, password_);
+          .computeBytesSize(2, password_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -178,10 +178,10 @@ public final class LoginMsg {
       LoginReq other = (LoginReq) obj;
 
       boolean result = true;
-      result = result && (getUsername()
-          == other.getUsername());
-      result = result && (getPassword()
-          == other.getPassword());
+      result = result && getUsername()
+          .equals(other.getUsername());
+      result = result && getPassword()
+          .equals(other.getPassword());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -194,9 +194,9 @@ public final class LoginMsg {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUsername();
+      hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-      hash = (53 * hash) + getPassword();
+      hash = (53 * hash) + getPassword().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -286,7 +286,7 @@ public final class LoginMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -302,7 +302,7 @@ public final class LoginMsg {
         return LoginMsg.internal_static_protocol_LoginReq_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return LoginMsg.internal_static_protocol_LoginReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -315,7 +315,7 @@ public final class LoginMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -326,9 +326,9 @@ public final class LoginMsg {
       }
       public Builder clear() {
         super.clear();
-        username_ = 0;
+        username_ = com.google.protobuf.ByteString.EMPTY;
 
-        password_ = 0;
+        password_ = com.google.protobuf.ByteString.EMPTY;
 
         return this;
       }
@@ -395,10 +395,10 @@ public final class LoginMsg {
 
       public Builder mergeFrom(LoginReq other) {
         if (other == LoginReq.getDefaultInstance()) return this;
-        if (other.getUsername() != 0) {
+        if (other.getUsername() != com.google.protobuf.ByteString.EMPTY) {
           setUsername(other.getUsername());
         }
-        if (other.getPassword() != 0) {
+        if (other.getPassword() != com.google.protobuf.ByteString.EMPTY) {
           setPassword(other.getPassword());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -428,54 +428,60 @@ public final class LoginMsg {
         return this;
       }
 
-      private int username_ ;
+      private com.google.protobuf.ByteString username_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>fixed32 username = 1;</code>
+       * <code>bytes username = 1;</code>
        */
-      public int getUsername() {
+      public com.google.protobuf.ByteString getUsername() {
         return username_;
       }
       /**
-       * <code>fixed32 username = 1;</code>
+       * <code>bytes username = 1;</code>
        */
-      public Builder setUsername(int value) {
-        
+      public Builder setUsername(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         username_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>fixed32 username = 1;</code>
+       * <code>bytes username = 1;</code>
        */
       public Builder clearUsername() {
         
-        username_ = 0;
+        username_ = getDefaultInstance().getUsername();
         onChanged();
         return this;
       }
 
-      private int password_ ;
+      private com.google.protobuf.ByteString password_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>fixed32 password = 2;</code>
+       * <code>bytes password = 2;</code>
        */
-      public int getPassword() {
+      public com.google.protobuf.ByteString getPassword() {
         return password_;
       }
       /**
-       * <code>fixed32 password = 2;</code>
+       * <code>bytes password = 2;</code>
        */
-      public Builder setPassword(int value) {
-        
+      public Builder setPassword(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         password_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>fixed32 password = 2;</code>
+       * <code>bytes password = 2;</code>
        */
       public Builder clearPassword() {
         
-        password_ = 0;
+        password_ = getDefaultInstance().getPassword();
         onChanged();
         return this;
       }
@@ -606,7 +612,7 @@ public final class LoginMsg {
       return LoginMsg.internal_static_protocol_LoginRsp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return LoginMsg.internal_static_protocol_LoginRsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -769,7 +775,7 @@ public final class LoginMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -785,7 +791,7 @@ public final class LoginMsg {
         return LoginMsg.internal_static_protocol_LoginRsp_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return LoginMsg.internal_static_protocol_LoginRsp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -798,7 +804,7 @@ public final class LoginMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -999,7 +1005,7 @@ public final class LoginMsg {
   static {
     String[] descriptorData = {
       "\n\016LoginMsg.proto\022\010protocol\".\n\010LoginReq\022\020" +
-      "\n\010username\030\001 \001(\007\022\020\n\010password\030\002 \001(\007\"\027\n\010Lo" +
+      "\n\010username\030\001 \001(\014\022\020\n\010password\030\002 \001(\014\"\027\n\010Lo" +
       "ginRsp\022\013\n\003ttl\030\001 \001(\007B\035\n\014protocol.msg\252\002\014pr" +
       "otocol.msgb\006proto3"
     };

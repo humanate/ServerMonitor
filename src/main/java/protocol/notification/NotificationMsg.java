@@ -120,7 +120,7 @@ public final class NotificationMsg {
       return NotificationMsg.internal_static_protocol_NotificationMessage_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return NotificationMsg.internal_static_protocol_NotificationMessage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -347,7 +347,7 @@ public final class NotificationMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -363,7 +363,7 @@ public final class NotificationMsg {
         return NotificationMsg.internal_static_protocol_NotificationMessage_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return NotificationMsg.internal_static_protocol_NotificationMessage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -376,7 +376,7 @@ public final class NotificationMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -749,7 +749,7 @@ public final class NotificationMsg {
       return NotificationMsg.internal_static_protocol_NotificationWelcome_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return NotificationMsg.internal_static_protocol_NotificationWelcome_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -912,7 +912,7 @@ public final class NotificationMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -928,7 +928,7 @@ public final class NotificationMsg {
         return NotificationMsg.internal_static_protocol_NotificationWelcome_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return NotificationMsg.internal_static_protocol_NotificationWelcome_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -941,7 +941,7 @@ public final class NotificationMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }

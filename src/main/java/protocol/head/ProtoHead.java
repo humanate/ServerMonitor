@@ -15,6 +15,11 @@ public final class ProtoHead {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   **
+   *消息头类型，ENUM采用大写驼峰
+   * </pre>
+   *
    * Protobuf enum {@code protocol.EMsgHead}
    */
   public enum EMsgHead
@@ -35,6 +40,14 @@ public final class ProtoHead {
      * <code>KEEP_ALIVE_RSP = 3;</code>
      */
     KEEP_ALIVE_RSP(3),
+    /**
+     * <code>SYSTEM_REQ = 4;</code>
+     */
+    SYSTEM_REQ(4),
+    /**
+     * <code>SYSTEM_RSP = 5;</code>
+     */
+    SYSTEM_RSP(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -54,6 +67,14 @@ public final class ProtoHead {
      * <code>KEEP_ALIVE_RSP = 3;</code>
      */
     public static final int KEEP_ALIVE_RSP_VALUE = 3;
+    /**
+     * <code>SYSTEM_REQ = 4;</code>
+     */
+    public static final int SYSTEM_REQ_VALUE = 4;
+    /**
+     * <code>SYSTEM_RSP = 5;</code>
+     */
+    public static final int SYSTEM_RSP_VALUE = 5;
 
 
     public final int getNumber() {
@@ -78,6 +99,8 @@ public final class ProtoHead {
         case 1: return LOGIN_RSP;
         case 2: return KEEP_ALIVE_REQ;
         case 3: return KEEP_ALIVE_RSP;
+        case 4: return SYSTEM_REQ;
+        case 5: return SYSTEM_RSP;
         default: return null;
       }
     }
@@ -139,10 +162,11 @@ public final class ProtoHead {
       descriptor;
   static {
     String[] descriptorData = {
-      "\n\017ProtoHead.proto\022\010protocol*P\n\010EMsgHead\022" +
+      "\n\017ProtoHead.proto\022\010protocol*p\n\010EMsgHead\022" +
       "\r\n\tLOGIN_REQ\020\000\022\r\n\tLOGIN_RSP\020\001\022\022\n\016KEEP_AL" +
-      "IVE_REQ\020\002\022\022\n\016KEEP_ALIVE_RSP\020\003B\037\n\rprotoco" +
-      "l.head\252\002\rprotocol.headb\006proto3"
+      "IVE_REQ\020\002\022\022\n\016KEEP_ALIVE_RSP\020\003\022\016\n\nSYSTEM_" +
+      "REQ\020\004\022\016\n\nSYSTEM_RSP\020\005B\037\n\rprotocol.head\252\002" +
+      "\rprotocol.headb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

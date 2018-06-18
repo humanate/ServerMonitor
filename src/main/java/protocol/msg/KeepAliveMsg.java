@@ -92,7 +92,7 @@ public final class KeepAliveMsg {
       return KeepAliveMsg.internal_static_protocol_KeepAliveReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return KeepAliveMsg.internal_static_protocol_KeepAliveReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -255,7 +255,7 @@ public final class KeepAliveMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -271,7 +271,7 @@ public final class KeepAliveMsg {
         return KeepAliveMsg.internal_static_protocol_KeepAliveReq_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return KeepAliveMsg.internal_static_protocol_KeepAliveReq_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -284,7 +284,7 @@ public final class KeepAliveMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -543,7 +543,7 @@ public final class KeepAliveMsg {
       return KeepAliveMsg.internal_static_protocol_KeepAliveRsp_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return KeepAliveMsg.internal_static_protocol_KeepAliveRsp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -706,7 +706,7 @@ public final class KeepAliveMsg {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -722,7 +722,7 @@ public final class KeepAliveMsg {
         return KeepAliveMsg.internal_static_protocol_KeepAliveRsp_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return KeepAliveMsg.internal_static_protocol_KeepAliveRsp_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -735,7 +735,7 @@ public final class KeepAliveMsg {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }

@@ -1,16 +1,13 @@
 package client;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
-import io.netty.util.CharsetUtil;
-import protocol.PacketProto;
-
-import static protocol.PacketProto.Packet.newBuilder;
+import protocol.ProtoMessage;
+import protocol.head.ProtoHead;
+import protocol.msg.KeepAliveMsg;
 
 @Sharable
 public class ConnectorIdleStateTrigger extends ChannelInboundHandlerAdapter {
@@ -26,10 +23,20 @@ public class ConnectorIdleStateTrigger extends ChannelInboundHandlerAdapter {
                 // write heartbeat to server
                 //ctx.writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
                 System.out.println("-----Send KeepAlive-----");
-                PacketProto.Packet.Builder builder = newBuilder();
+/*                PacketProto.Packet.Builder builder = newBuilder();
                 builder.setPacketType(PacketProto.Packet.PacketType.HEARTBEAT);
                 PacketProto.Packet packet = builder.build();
-                ctx.writeAndFlush(packet);
+                ctx.writeAndFlush(packet);*/
+                ProtoMessage.ProtoMsg.Builder msg = ProtoMessage.ProtoMsg.newBuilder();
+                msg.setType(ProtoHead.EMsgHead.KEEP_ALIVE_REQ);
+                msg.setSequence(0);
+                msg.setSessionId(1);
+                ProtoMessage.Request.Builder req = ProtoMessage.Request.newBuilder();
+                KeepAliveMsg.KeepAliveReq.Builder keepReq = KeepAliveMsg.KeepAliveReq.newBuilder();
+                keepReq.setTime(111);
+                req.setKeepAliveReq(keepReq);
+                msg.setRequest(req);
+                ctx.writeAndFlush(msg.build());
             }
         } else {
             super.userEventTriggered(ctx, evt);

@@ -19,10 +19,18 @@ public final class ProtoMessage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *消息头类型
+     * </pre>
+     *
      * <code>.protocol.EMsgHead type = 1;</code>
      */
     int getTypeValue();
     /**
+     * <pre>
+     *消息头类型
+     * </pre>
+     *
      * <code>.protocol.EMsgHead type = 1;</code>
      */
     protocol.head.ProtoHead.EMsgHead getType();
@@ -37,45 +45,85 @@ public final class ProtoMessage {
     int getSequence();
 
     /**
+     * <pre>
+     *session的Id
+     * </pre>
+     *
      * <code>fixed32 session_id = 3;</code>
      */
     int getSessionId();
 
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     boolean hasRequest();
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     Request getRequest();
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     RequestOrBuilder getRequestOrBuilder();
 
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     boolean hasResponse();
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     Response getResponse();
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     ResponseOrBuilder getResponseOrBuilder();
 
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     boolean hasNotification();
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     Notification getNotification();
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     NotificationOrBuilder getNotificationOrBuilder();
@@ -201,7 +249,7 @@ public final class ProtoMessage {
       return ProtoMessage.internal_static_protocol_ProtoMsg_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ProtoMessage.internal_static_protocol_ProtoMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -211,12 +259,20 @@ public final class ProtoMessage {
     public static final int TYPE_FIELD_NUMBER = 1;
     private int type_;
     /**
+     * <pre>
+     *消息头类型
+     * </pre>
+     *
      * <code>.protocol.EMsgHead type = 1;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
+     * <pre>
+     *消息头类型
+     * </pre>
+     *
      * <code>.protocol.EMsgHead type = 1;</code>
      */
     public protocol.head.ProtoHead.EMsgHead getType() {
@@ -240,6 +296,10 @@ public final class ProtoMessage {
     public static final int SESSION_ID_FIELD_NUMBER = 3;
     private int sessionId_;
     /**
+     * <pre>
+     *session的Id
+     * </pre>
+     *
      * <code>fixed32 session_id = 3;</code>
      */
     public int getSessionId() {
@@ -249,18 +309,30 @@ public final class ProtoMessage {
     public static final int REQUEST_FIELD_NUMBER = 4;
     private Request request_;
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     public boolean hasRequest() {
       return request_ != null;
     }
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     public Request getRequest() {
       return request_ == null ? Request.getDefaultInstance() : request_;
     }
     /**
+     * <pre>
+     *请求类型
+     * </pre>
+     *
      * <code>.protocol.Request request = 4;</code>
      */
     public RequestOrBuilder getRequestOrBuilder() {
@@ -270,18 +342,30 @@ public final class ProtoMessage {
     public static final int RESPONSE_FIELD_NUMBER = 5;
     private Response response_;
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     public boolean hasResponse() {
       return response_ != null;
     }
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     public Response getResponse() {
       return response_ == null ? Response.getDefaultInstance() : response_;
     }
     /**
+     * <pre>
+     *回复类型
+     * </pre>
+     *
      * <code>.protocol.Response response = 5;</code>
      */
     public ResponseOrBuilder getResponseOrBuilder() {
@@ -291,18 +375,30 @@ public final class ProtoMessage {
     public static final int NOTIFICATION_FIELD_NUMBER = 6;
     private Notification notification_;
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     public boolean hasNotification() {
       return notification_ != null;
     }
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     public Notification getNotification() {
       return notification_ == null ? Notification.getDefaultInstance() : notification_;
     }
     /**
+     * <pre>
+     *通知类型
+     * </pre>
+     *
      * <code>.protocol.Notification notification = 6;</code>
      */
     public NotificationOrBuilder getNotificationOrBuilder() {
@@ -525,7 +621,7 @@ public final class ProtoMessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -541,7 +637,7 @@ public final class ProtoMessage {
         return ProtoMessage.internal_static_protocol_ProtoMsg_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return ProtoMessage.internal_static_protocol_ProtoMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -554,7 +650,7 @@ public final class ProtoMessage {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -717,12 +813,20 @@ public final class ProtoMessage {
 
       private int type_ = 0;
       /**
+       * <pre>
+       *消息头类型
+       * </pre>
+       *
        * <code>.protocol.EMsgHead type = 1;</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
+       * <pre>
+       *消息头类型
+       * </pre>
+       *
        * <code>.protocol.EMsgHead type = 1;</code>
        */
       public Builder setTypeValue(int value) {
@@ -731,6 +835,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *消息头类型
+       * </pre>
+       *
        * <code>.protocol.EMsgHead type = 1;</code>
        */
       public protocol.head.ProtoHead.EMsgHead getType() {
@@ -738,6 +846,10 @@ public final class ProtoMessage {
         return result == null ? protocol.head.ProtoHead.EMsgHead.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       *消息头类型
+       * </pre>
+       *
        * <code>.protocol.EMsgHead type = 1;</code>
        */
       public Builder setType(protocol.head.ProtoHead.EMsgHead value) {
@@ -750,6 +862,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *消息头类型
+       * </pre>
+       *
        * <code>.protocol.EMsgHead type = 1;</code>
        */
       public Builder clearType() {
@@ -799,12 +915,20 @@ public final class ProtoMessage {
 
       private int sessionId_ ;
       /**
+       * <pre>
+       *session的Id
+       * </pre>
+       *
        * <code>fixed32 session_id = 3;</code>
        */
       public int getSessionId() {
         return sessionId_;
       }
       /**
+       * <pre>
+       *session的Id
+       * </pre>
+       *
        * <code>fixed32 session_id = 3;</code>
        */
       public Builder setSessionId(int value) {
@@ -814,6 +938,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *session的Id
+       * </pre>
+       *
        * <code>fixed32 session_id = 3;</code>
        */
       public Builder clearSessionId() {
@@ -827,12 +955,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           Request, Request.Builder, RequestOrBuilder> requestBuilder_;
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public boolean hasRequest() {
         return requestBuilder_ != null || request_ != null;
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Request getRequest() {
@@ -843,6 +979,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Builder setRequest(Request value) {
@@ -859,6 +999,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Builder setRequest(
@@ -873,6 +1017,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Builder mergeRequest(Request value) {
@@ -891,6 +1039,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Builder clearRequest() {
@@ -905,6 +1057,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public Request.Builder getRequestBuilder() {
@@ -913,6 +1069,10 @@ public final class ProtoMessage {
         return getRequestFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       public RequestOrBuilder getRequestOrBuilder() {
@@ -924,6 +1084,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *请求类型
+       * </pre>
+       *
        * <code>.protocol.Request request = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -944,12 +1108,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           Response, Response.Builder, ResponseOrBuilder> responseBuilder_;
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public boolean hasResponse() {
         return responseBuilder_ != null || response_ != null;
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Response getResponse() {
@@ -960,6 +1132,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Builder setResponse(Response value) {
@@ -976,6 +1152,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Builder setResponse(
@@ -990,6 +1170,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Builder mergeResponse(Response value) {
@@ -1008,6 +1192,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Builder clearResponse() {
@@ -1022,6 +1210,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public Response.Builder getResponseBuilder() {
@@ -1030,6 +1222,10 @@ public final class ProtoMessage {
         return getResponseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       public ResponseOrBuilder getResponseOrBuilder() {
@@ -1041,6 +1237,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *回复类型
+       * </pre>
+       *
        * <code>.protocol.Response response = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1061,12 +1261,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           Notification, Notification.Builder, NotificationOrBuilder> notificationBuilder_;
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public boolean hasNotification() {
         return notificationBuilder_ != null || notification_ != null;
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Notification getNotification() {
@@ -1077,6 +1285,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Builder setNotification(Notification value) {
@@ -1093,6 +1305,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Builder setNotification(
@@ -1107,6 +1323,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Builder mergeNotification(Notification value) {
@@ -1125,6 +1345,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Builder clearNotification() {
@@ -1139,6 +1363,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public Notification.Builder getNotificationBuilder() {
@@ -1147,6 +1375,10 @@ public final class ProtoMessage {
         return getNotificationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       public NotificationOrBuilder getNotificationOrBuilder() {
@@ -1158,6 +1390,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *通知类型
+       * </pre>
+       *
        * <code>.protocol.Notification notification = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1227,30 +1463,79 @@ public final class ProtoMessage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     boolean hasLoginReq();
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     protocol.msg.LoginMsg.LoginReq getLoginReq();
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     protocol.msg.LoginMsg.LoginReqOrBuilder getLoginReqOrBuilder();
 
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     boolean hasKeepAliveReq();
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     protocol.msg.KeepAliveMsg.KeepAliveReq getKeepAliveReq();
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     protocol.msg.KeepAliveMsg.KeepAliveReqOrBuilder getKeepAliveReqOrBuilder();
+
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    boolean hasSystemInfoReq();
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    protocol.msg.SystemMsg.SystemInfoReq getSystemInfoReq();
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    protocol.msg.SystemMsg.SystemInfoReqOrBuilder getSystemInfoReqOrBuilder();
   }
   /**
    * Protobuf type {@code protocol.Request}
@@ -1324,6 +1609,19 @@ public final class ProtoMessage {
 
               break;
             }
+            case 26: {
+              protocol.msg.SystemMsg.SystemInfoReq.Builder subBuilder = null;
+              if (systemInfoReq_ != null) {
+                subBuilder = systemInfoReq_.toBuilder();
+              }
+              systemInfoReq_ = input.readMessage(protocol.msg.SystemMsg.SystemInfoReq.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(systemInfoReq_);
+                systemInfoReq_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1341,7 +1639,7 @@ public final class ProtoMessage {
       return ProtoMessage.internal_static_protocol_Request_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ProtoMessage.internal_static_protocol_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -1351,18 +1649,30 @@ public final class ProtoMessage {
     public static final int LOGIN_REQ_FIELD_NUMBER = 1;
     private protocol.msg.LoginMsg.LoginReq loginReq_;
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     public boolean hasLoginReq() {
       return loginReq_ != null;
     }
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     public protocol.msg.LoginMsg.LoginReq getLoginReq() {
       return loginReq_ == null ? protocol.msg.LoginMsg.LoginReq.getDefaultInstance() : loginReq_;
     }
     /**
+     * <pre>
+     *登录请求
+     * </pre>
+     *
      * <code>.protocol.LoginReq login_req = 1;</code>
      */
     public protocol.msg.LoginMsg.LoginReqOrBuilder getLoginReqOrBuilder() {
@@ -1372,22 +1682,67 @@ public final class ProtoMessage {
     public static final int KEEP_ALIVE_REQ_FIELD_NUMBER = 2;
     private protocol.msg.KeepAliveMsg.KeepAliveReq keepAliveReq_;
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     public boolean hasKeepAliveReq() {
       return keepAliveReq_ != null;
     }
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     public protocol.msg.KeepAliveMsg.KeepAliveReq getKeepAliveReq() {
       return keepAliveReq_ == null ? protocol.msg.KeepAliveMsg.KeepAliveReq.getDefaultInstance() : keepAliveReq_;
     }
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
      */
     public protocol.msg.KeepAliveMsg.KeepAliveReqOrBuilder getKeepAliveReqOrBuilder() {
       return getKeepAliveReq();
+    }
+
+    public static final int SYSTEM_INFO_REQ_FIELD_NUMBER = 3;
+    private protocol.msg.SystemMsg.SystemInfoReq systemInfoReq_;
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    public boolean hasSystemInfoReq() {
+      return systemInfoReq_ != null;
+    }
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    public protocol.msg.SystemMsg.SystemInfoReq getSystemInfoReq() {
+      return systemInfoReq_ == null ? protocol.msg.SystemMsg.SystemInfoReq.getDefaultInstance() : systemInfoReq_;
+    }
+    /**
+     * <pre>
+     *请求查看系统详情
+     * </pre>
+     *
+     * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+     */
+    public protocol.msg.SystemMsg.SystemInfoReqOrBuilder getSystemInfoReqOrBuilder() {
+      return getSystemInfoReq();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1408,6 +1763,9 @@ public final class ProtoMessage {
       if (keepAliveReq_ != null) {
         output.writeMessage(2, getKeepAliveReq());
       }
+      if (systemInfoReq_ != null) {
+        output.writeMessage(3, getSystemInfoReq());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1423,6 +1781,10 @@ public final class ProtoMessage {
       if (keepAliveReq_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getKeepAliveReq());
+      }
+      if (systemInfoReq_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSystemInfoReq());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1450,6 +1812,11 @@ public final class ProtoMessage {
         result = result && getKeepAliveReq()
             .equals(other.getKeepAliveReq());
       }
+      result = result && (hasSystemInfoReq() == other.hasSystemInfoReq());
+      if (hasSystemInfoReq()) {
+        result = result && getSystemInfoReq()
+            .equals(other.getSystemInfoReq());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1468,6 +1835,10 @@ public final class ProtoMessage {
       if (hasKeepAliveReq()) {
         hash = (37 * hash) + KEEP_ALIVE_REQ_FIELD_NUMBER;
         hash = (53 * hash) + getKeepAliveReq().hashCode();
+      }
+      if (hasSystemInfoReq()) {
+        hash = (37 * hash) + SYSTEM_INFO_REQ_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemInfoReq().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1558,7 +1929,7 @@ public final class ProtoMessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1574,7 +1945,7 @@ public final class ProtoMessage {
         return ProtoMessage.internal_static_protocol_Request_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return ProtoMessage.internal_static_protocol_Request_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1587,7 +1958,7 @@ public final class ProtoMessage {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1609,6 +1980,12 @@ public final class ProtoMessage {
         } else {
           keepAliveReq_ = null;
           keepAliveReqBuilder_ = null;
+        }
+        if (systemInfoReqBuilder_ == null) {
+          systemInfoReq_ = null;
+        } else {
+          systemInfoReq_ = null;
+          systemInfoReqBuilder_ = null;
         }
         return this;
       }
@@ -1641,6 +2018,11 @@ public final class ProtoMessage {
           result.keepAliveReq_ = keepAliveReq_;
         } else {
           result.keepAliveReq_ = keepAliveReqBuilder_.build();
+        }
+        if (systemInfoReqBuilder_ == null) {
+          result.systemInfoReq_ = systemInfoReq_;
+        } else {
+          result.systemInfoReq_ = systemInfoReqBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1689,6 +2071,9 @@ public final class ProtoMessage {
         if (other.hasKeepAliveReq()) {
           mergeKeepAliveReq(other.getKeepAliveReq());
         }
+        if (other.hasSystemInfoReq()) {
+          mergeSystemInfoReq(other.getSystemInfoReq());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1720,12 +2105,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.msg.LoginMsg.LoginReq, protocol.msg.LoginMsg.LoginReq.Builder, protocol.msg.LoginMsg.LoginReqOrBuilder> loginReqBuilder_;
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public boolean hasLoginReq() {
         return loginReqBuilder_ != null || loginReq_ != null;
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public protocol.msg.LoginMsg.LoginReq getLoginReq() {
@@ -1736,6 +2129,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public Builder setLoginReq(protocol.msg.LoginMsg.LoginReq value) {
@@ -1752,6 +2149,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public Builder setLoginReq(
@@ -1766,6 +2167,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public Builder mergeLoginReq(protocol.msg.LoginMsg.LoginReq value) {
@@ -1784,6 +2189,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public Builder clearLoginReq() {
@@ -1798,6 +2207,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public protocol.msg.LoginMsg.LoginReq.Builder getLoginReqBuilder() {
@@ -1806,6 +2219,10 @@ public final class ProtoMessage {
         return getLoginReqFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       public protocol.msg.LoginMsg.LoginReqOrBuilder getLoginReqOrBuilder() {
@@ -1817,6 +2234,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *登录请求
+       * </pre>
+       *
        * <code>.protocol.LoginReq login_req = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1837,12 +2258,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.msg.KeepAliveMsg.KeepAliveReq, protocol.msg.KeepAliveMsg.KeepAliveReq.Builder, protocol.msg.KeepAliveMsg.KeepAliveReqOrBuilder> keepAliveReqBuilder_;
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public boolean hasKeepAliveReq() {
         return keepAliveReqBuilder_ != null || keepAliveReq_ != null;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveReq getKeepAliveReq() {
@@ -1853,6 +2282,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public Builder setKeepAliveReq(protocol.msg.KeepAliveMsg.KeepAliveReq value) {
@@ -1869,6 +2302,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public Builder setKeepAliveReq(
@@ -1883,6 +2320,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public Builder mergeKeepAliveReq(protocol.msg.KeepAliveMsg.KeepAliveReq value) {
@@ -1901,6 +2342,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public Builder clearKeepAliveReq() {
@@ -1915,6 +2360,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveReq.Builder getKeepAliveReqBuilder() {
@@ -1923,6 +2372,10 @@ public final class ProtoMessage {
         return getKeepAliveReqFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveReqOrBuilder getKeepAliveReqOrBuilder() {
@@ -1934,6 +2387,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveReq keep_alive_req = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1948,6 +2405,159 @@ public final class ProtoMessage {
           keepAliveReq_ = null;
         }
         return keepAliveReqBuilder_;
+      }
+
+      private protocol.msg.SystemMsg.SystemInfoReq systemInfoReq_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protocol.msg.SystemMsg.SystemInfoReq, protocol.msg.SystemMsg.SystemInfoReq.Builder, protocol.msg.SystemMsg.SystemInfoReqOrBuilder> systemInfoReqBuilder_;
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public boolean hasSystemInfoReq() {
+        return systemInfoReqBuilder_ != null || systemInfoReq_ != null;
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoReq getSystemInfoReq() {
+        if (systemInfoReqBuilder_ == null) {
+          return systemInfoReq_ == null ? protocol.msg.SystemMsg.SystemInfoReq.getDefaultInstance() : systemInfoReq_;
+        } else {
+          return systemInfoReqBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public Builder setSystemInfoReq(protocol.msg.SystemMsg.SystemInfoReq value) {
+        if (systemInfoReqBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          systemInfoReq_ = value;
+          onChanged();
+        } else {
+          systemInfoReqBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public Builder setSystemInfoReq(
+          protocol.msg.SystemMsg.SystemInfoReq.Builder builderForValue) {
+        if (systemInfoReqBuilder_ == null) {
+          systemInfoReq_ = builderForValue.build();
+          onChanged();
+        } else {
+          systemInfoReqBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public Builder mergeSystemInfoReq(protocol.msg.SystemMsg.SystemInfoReq value) {
+        if (systemInfoReqBuilder_ == null) {
+          if (systemInfoReq_ != null) {
+            systemInfoReq_ =
+              protocol.msg.SystemMsg.SystemInfoReq.newBuilder(systemInfoReq_).mergeFrom(value).buildPartial();
+          } else {
+            systemInfoReq_ = value;
+          }
+          onChanged();
+        } else {
+          systemInfoReqBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public Builder clearSystemInfoReq() {
+        if (systemInfoReqBuilder_ == null) {
+          systemInfoReq_ = null;
+          onChanged();
+        } else {
+          systemInfoReq_ = null;
+          systemInfoReqBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoReq.Builder getSystemInfoReqBuilder() {
+        
+        onChanged();
+        return getSystemInfoReqFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoReqOrBuilder getSystemInfoReqOrBuilder() {
+        if (systemInfoReqBuilder_ != null) {
+          return systemInfoReqBuilder_.getMessageOrBuilder();
+        } else {
+          return systemInfoReq_ == null ?
+              protocol.msg.SystemMsg.SystemInfoReq.getDefaultInstance() : systemInfoReq_;
+        }
+      }
+      /**
+       * <pre>
+       *请求查看系统详情
+       * </pre>
+       *
+       * <code>.protocol.SystemInfoReq system_info_req = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protocol.msg.SystemMsg.SystemInfoReq, protocol.msg.SystemMsg.SystemInfoReq.Builder, protocol.msg.SystemMsg.SystemInfoReqOrBuilder> 
+          getSystemInfoReqFieldBuilder() {
+        if (systemInfoReqBuilder_ == null) {
+          systemInfoReqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              protocol.msg.SystemMsg.SystemInfoReq, protocol.msg.SystemMsg.SystemInfoReq.Builder, protocol.msg.SystemMsg.SystemInfoReqOrBuilder>(
+                  getSystemInfoReq(),
+                  getParentForChildren(),
+                  isClean());
+          systemInfoReq_ = null;
+        }
+        return systemInfoReqBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2030,30 +2640,67 @@ public final class ProtoMessage {
     com.google.protobuf.ByteString getErrorDescribe();
 
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     boolean hasLoginRsp();
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     protocol.msg.LoginMsg.LoginRsp getLoginRsp();
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     protocol.msg.LoginMsg.LoginRspOrBuilder getLoginRspOrBuilder();
 
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     boolean hasKeepAliveRsp();
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     protocol.msg.KeepAliveMsg.KeepAliveRsp getKeepAliveRsp();
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     protocol.msg.KeepAliveMsg.KeepAliveRspOrBuilder getKeepAliveRspOrBuilder();
+
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    boolean hasSystemInfoRsp();
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    protocol.msg.SystemMsg.SystemInfoRsp getSystemInfoRsp();
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    protocol.msg.SystemMsg.SystemInfoRspOrBuilder getSystemInfoRspOrBuilder();
   }
   /**
    * Protobuf type {@code protocol.Response}
@@ -2145,6 +2792,19 @@ public final class ProtoMessage {
 
               break;
             }
+            case 50: {
+              protocol.msg.SystemMsg.SystemInfoRsp.Builder subBuilder = null;
+              if (systemInfoRsp_ != null) {
+                subBuilder = systemInfoRsp_.toBuilder();
+              }
+              systemInfoRsp_ = input.readMessage(protocol.msg.SystemMsg.SystemInfoRsp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(systemInfoRsp_);
+                systemInfoRsp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2162,7 +2822,7 @@ public final class ProtoMessage {
       return ProtoMessage.internal_static_protocol_Response_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ProtoMessage.internal_static_protocol_Response_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -2211,18 +2871,30 @@ public final class ProtoMessage {
     public static final int LOGIN_RSP_FIELD_NUMBER = 4;
     private protocol.msg.LoginMsg.LoginRsp loginRsp_;
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     public boolean hasLoginRsp() {
       return loginRsp_ != null;
     }
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     public protocol.msg.LoginMsg.LoginRsp getLoginRsp() {
       return loginRsp_ == null ? protocol.msg.LoginMsg.LoginRsp.getDefaultInstance() : loginRsp_;
     }
     /**
+     * <pre>
+     *登录回复
+     * </pre>
+     *
      * <code>.protocol.LoginRsp login_rsp = 4;</code>
      */
     public protocol.msg.LoginMsg.LoginRspOrBuilder getLoginRspOrBuilder() {
@@ -2232,22 +2904,55 @@ public final class ProtoMessage {
     public static final int KEEP_ALIVE_RSP_FIELD_NUMBER = 5;
     private protocol.msg.KeepAliveMsg.KeepAliveRsp keepAliveRsp_;
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     public boolean hasKeepAliveRsp() {
       return keepAliveRsp_ != null;
     }
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     public protocol.msg.KeepAliveMsg.KeepAliveRsp getKeepAliveRsp() {
       return keepAliveRsp_ == null ? protocol.msg.KeepAliveMsg.KeepAliveRsp.getDefaultInstance() : keepAliveRsp_;
     }
     /**
+     * <pre>
+     *保活请求
+     * </pre>
+     *
      * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
      */
     public protocol.msg.KeepAliveMsg.KeepAliveRspOrBuilder getKeepAliveRspOrBuilder() {
       return getKeepAliveRsp();
+    }
+
+    public static final int SYSTEM_INFO_RSP_FIELD_NUMBER = 6;
+    private protocol.msg.SystemMsg.SystemInfoRsp systemInfoRsp_;
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    public boolean hasSystemInfoRsp() {
+      return systemInfoRsp_ != null;
+    }
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    public protocol.msg.SystemMsg.SystemInfoRsp getSystemInfoRsp() {
+      return systemInfoRsp_ == null ? protocol.msg.SystemMsg.SystemInfoRsp.getDefaultInstance() : systemInfoRsp_;
+    }
+    /**
+     * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+     */
+    public protocol.msg.SystemMsg.SystemInfoRspOrBuilder getSystemInfoRspOrBuilder() {
+      return getSystemInfoRsp();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2277,6 +2982,9 @@ public final class ProtoMessage {
       if (keepAliveRsp_ != null) {
         output.writeMessage(5, getKeepAliveRsp());
       }
+      if (systemInfoRsp_ != null) {
+        output.writeMessage(6, getSystemInfoRsp());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2304,6 +3012,10 @@ public final class ProtoMessage {
       if (keepAliveRsp_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getKeepAliveRsp());
+      }
+      if (systemInfoRsp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSystemInfoRsp());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2337,6 +3049,11 @@ public final class ProtoMessage {
         result = result && getKeepAliveRsp()
             .equals(other.getKeepAliveRsp());
       }
+      result = result && (hasSystemInfoRsp() == other.hasSystemInfoRsp());
+      if (hasSystemInfoRsp()) {
+        result = result && getSystemInfoRsp()
+            .equals(other.getSystemInfoRsp());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2363,6 +3080,10 @@ public final class ProtoMessage {
       if (hasKeepAliveRsp()) {
         hash = (37 * hash) + KEEP_ALIVE_RSP_FIELD_NUMBER;
         hash = (53 * hash) + getKeepAliveRsp().hashCode();
+      }
+      if (hasSystemInfoRsp()) {
+        hash = (37 * hash) + SYSTEM_INFO_RSP_FIELD_NUMBER;
+        hash = (53 * hash) + getSystemInfoRsp().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2453,7 +3174,7 @@ public final class ProtoMessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2469,7 +3190,7 @@ public final class ProtoMessage {
         return ProtoMessage.internal_static_protocol_Response_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return ProtoMessage.internal_static_protocol_Response_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2482,7 +3203,7 @@ public final class ProtoMessage {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2510,6 +3231,12 @@ public final class ProtoMessage {
         } else {
           keepAliveRsp_ = null;
           keepAliveRspBuilder_ = null;
+        }
+        if (systemInfoRspBuilder_ == null) {
+          systemInfoRsp_ = null;
+        } else {
+          systemInfoRsp_ = null;
+          systemInfoRspBuilder_ = null;
         }
         return this;
       }
@@ -2545,6 +3272,11 @@ public final class ProtoMessage {
           result.keepAliveRsp_ = keepAliveRsp_;
         } else {
           result.keepAliveRsp_ = keepAliveRspBuilder_.build();
+        }
+        if (systemInfoRspBuilder_ == null) {
+          result.systemInfoRsp_ = systemInfoRsp_;
+        } else {
+          result.systemInfoRsp_ = systemInfoRspBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2601,6 +3333,9 @@ public final class ProtoMessage {
         }
         if (other.hasKeepAliveRsp()) {
           mergeKeepAliveRsp(other.getKeepAliveRsp());
+        }
+        if (other.hasSystemInfoRsp()) {
+          mergeSystemInfoRsp(other.getSystemInfoRsp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2750,12 +3485,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.msg.LoginMsg.LoginRsp, protocol.msg.LoginMsg.LoginRsp.Builder, protocol.msg.LoginMsg.LoginRspOrBuilder> loginRspBuilder_;
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public boolean hasLoginRsp() {
         return loginRspBuilder_ != null || loginRsp_ != null;
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public protocol.msg.LoginMsg.LoginRsp getLoginRsp() {
@@ -2766,6 +3509,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public Builder setLoginRsp(protocol.msg.LoginMsg.LoginRsp value) {
@@ -2782,6 +3529,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public Builder setLoginRsp(
@@ -2796,6 +3547,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public Builder mergeLoginRsp(protocol.msg.LoginMsg.LoginRsp value) {
@@ -2814,6 +3569,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public Builder clearLoginRsp() {
@@ -2828,6 +3587,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public protocol.msg.LoginMsg.LoginRsp.Builder getLoginRspBuilder() {
@@ -2836,6 +3599,10 @@ public final class ProtoMessage {
         return getLoginRspFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       public protocol.msg.LoginMsg.LoginRspOrBuilder getLoginRspOrBuilder() {
@@ -2847,6 +3614,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *登录回复
+       * </pre>
+       *
        * <code>.protocol.LoginRsp login_rsp = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2867,12 +3638,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.msg.KeepAliveMsg.KeepAliveRsp, protocol.msg.KeepAliveMsg.KeepAliveRsp.Builder, protocol.msg.KeepAliveMsg.KeepAliveRspOrBuilder> keepAliveRspBuilder_;
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public boolean hasKeepAliveRsp() {
         return keepAliveRspBuilder_ != null || keepAliveRsp_ != null;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveRsp getKeepAliveRsp() {
@@ -2883,6 +3662,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public Builder setKeepAliveRsp(protocol.msg.KeepAliveMsg.KeepAliveRsp value) {
@@ -2899,6 +3682,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public Builder setKeepAliveRsp(
@@ -2913,6 +3700,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public Builder mergeKeepAliveRsp(protocol.msg.KeepAliveMsg.KeepAliveRsp value) {
@@ -2931,6 +3722,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public Builder clearKeepAliveRsp() {
@@ -2945,6 +3740,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveRsp.Builder getKeepAliveRspBuilder() {
@@ -2953,6 +3752,10 @@ public final class ProtoMessage {
         return getKeepAliveRspFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       public protocol.msg.KeepAliveMsg.KeepAliveRspOrBuilder getKeepAliveRspOrBuilder() {
@@ -2964,6 +3767,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *保活请求
+       * </pre>
+       *
        * <code>.protocol.KeepAliveRsp keep_alive_rsp = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2978,6 +3785,123 @@ public final class ProtoMessage {
           keepAliveRsp_ = null;
         }
         return keepAliveRspBuilder_;
+      }
+
+      private protocol.msg.SystemMsg.SystemInfoRsp systemInfoRsp_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protocol.msg.SystemMsg.SystemInfoRsp, protocol.msg.SystemMsg.SystemInfoRsp.Builder, protocol.msg.SystemMsg.SystemInfoRspOrBuilder> systemInfoRspBuilder_;
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public boolean hasSystemInfoRsp() {
+        return systemInfoRspBuilder_ != null || systemInfoRsp_ != null;
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoRsp getSystemInfoRsp() {
+        if (systemInfoRspBuilder_ == null) {
+          return systemInfoRsp_ == null ? protocol.msg.SystemMsg.SystemInfoRsp.getDefaultInstance() : systemInfoRsp_;
+        } else {
+          return systemInfoRspBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public Builder setSystemInfoRsp(protocol.msg.SystemMsg.SystemInfoRsp value) {
+        if (systemInfoRspBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          systemInfoRsp_ = value;
+          onChanged();
+        } else {
+          systemInfoRspBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public Builder setSystemInfoRsp(
+          protocol.msg.SystemMsg.SystemInfoRsp.Builder builderForValue) {
+        if (systemInfoRspBuilder_ == null) {
+          systemInfoRsp_ = builderForValue.build();
+          onChanged();
+        } else {
+          systemInfoRspBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public Builder mergeSystemInfoRsp(protocol.msg.SystemMsg.SystemInfoRsp value) {
+        if (systemInfoRspBuilder_ == null) {
+          if (systemInfoRsp_ != null) {
+            systemInfoRsp_ =
+              protocol.msg.SystemMsg.SystemInfoRsp.newBuilder(systemInfoRsp_).mergeFrom(value).buildPartial();
+          } else {
+            systemInfoRsp_ = value;
+          }
+          onChanged();
+        } else {
+          systemInfoRspBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public Builder clearSystemInfoRsp() {
+        if (systemInfoRspBuilder_ == null) {
+          systemInfoRsp_ = null;
+          onChanged();
+        } else {
+          systemInfoRsp_ = null;
+          systemInfoRspBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoRsp.Builder getSystemInfoRspBuilder() {
+        
+        onChanged();
+        return getSystemInfoRspFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      public protocol.msg.SystemMsg.SystemInfoRspOrBuilder getSystemInfoRspOrBuilder() {
+        if (systemInfoRspBuilder_ != null) {
+          return systemInfoRspBuilder_.getMessageOrBuilder();
+        } else {
+          return systemInfoRsp_ == null ?
+              protocol.msg.SystemMsg.SystemInfoRsp.getDefaultInstance() : systemInfoRsp_;
+        }
+      }
+      /**
+       * <code>.protocol.SystemInfoRsp system_info_rsp = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          protocol.msg.SystemMsg.SystemInfoRsp, protocol.msg.SystemMsg.SystemInfoRsp.Builder, protocol.msg.SystemMsg.SystemInfoRspOrBuilder> 
+          getSystemInfoRspFieldBuilder() {
+        if (systemInfoRspBuilder_ == null) {
+          systemInfoRspBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              protocol.msg.SystemMsg.SystemInfoRsp, protocol.msg.SystemMsg.SystemInfoRsp.Builder, protocol.msg.SystemMsg.SystemInfoRspOrBuilder>(
+                  getSystemInfoRsp(),
+                  getParentForChildren(),
+                  isClean());
+          systemInfoRsp_ = null;
+        }
+        return systemInfoRspBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3033,34 +3957,58 @@ public final class ProtoMessage {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     boolean hasMsg();
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     protocol.notification.NotificationMsg.NotificationMessage getMsg();
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     protocol.notification.NotificationMsg.NotificationMessageOrBuilder getMsgOrBuilder();
 
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     boolean hasWelcome();
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     protocol.notification.NotificationMsg.NotificationWelcome getWelcome();
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     protocol.notification.NotificationMsg.NotificationWelcomeOrBuilder getWelcomeOrBuilder();
   }
   /**
    * <pre>
-   *与Request相同,把所有的XxxxxNotification消息集合在一起当作联合体使用.
+   *与Request相同,把所有的Notification消息集合在一起当作联合体使用.
    * </pre>
    *
    * Protobuf type {@code protocol.Notification}
@@ -3151,7 +4099,7 @@ public final class ProtoMessage {
       return ProtoMessage.internal_static_protocol_Notification_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ProtoMessage.internal_static_protocol_Notification_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -3161,18 +4109,30 @@ public final class ProtoMessage {
     public static final int MSG_FIELD_NUMBER = 2;
     private protocol.notification.NotificationMsg.NotificationMessage msg_;
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     public boolean hasMsg() {
       return msg_ != null;
     }
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     public protocol.notification.NotificationMsg.NotificationMessage getMsg() {
       return msg_ == null ? protocol.notification.NotificationMsg.NotificationMessage.getDefaultInstance() : msg_;
     }
     /**
+     * <pre>
+     *通知消息
+     * </pre>
+     *
      * <code>.protocol.NotificationMessage msg = 2;</code>
      */
     public protocol.notification.NotificationMsg.NotificationMessageOrBuilder getMsgOrBuilder() {
@@ -3182,18 +4142,30 @@ public final class ProtoMessage {
     public static final int WELCOME_FIELD_NUMBER = 3;
     private protocol.notification.NotificationMsg.NotificationWelcome welcome_;
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     public boolean hasWelcome() {
       return welcome_ != null;
     }
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     public protocol.notification.NotificationMsg.NotificationWelcome getWelcome() {
       return welcome_ == null ? protocol.notification.NotificationMsg.NotificationWelcome.getDefaultInstance() : welcome_;
     }
     /**
+     * <pre>
+     *欢迎消息
+     * </pre>
+     *
      * <code>.protocol.NotificationWelcome welcome = 3;</code>
      */
     public protocol.notification.NotificationMsg.NotificationWelcomeOrBuilder getWelcomeOrBuilder() {
@@ -3368,13 +4340,13 @@ public final class ProtoMessage {
 
     @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
      * <pre>
-     *与Request相同,把所有的XxxxxNotification消息集合在一起当作联合体使用.
+     *与Request相同,把所有的Notification消息集合在一起当作联合体使用.
      * </pre>
      *
      * Protobuf type {@code protocol.Notification}
@@ -3388,7 +4360,7 @@ public final class ProtoMessage {
         return ProtoMessage.internal_static_protocol_Notification_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return ProtoMessage.internal_static_protocol_Notification_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3401,7 +4373,7 @@ public final class ProtoMessage {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3534,12 +4506,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.notification.NotificationMsg.NotificationMessage, protocol.notification.NotificationMsg.NotificationMessage.Builder, protocol.notification.NotificationMsg.NotificationMessageOrBuilder> msgBuilder_;
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public boolean hasMsg() {
         return msgBuilder_ != null || msg_ != null;
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public protocol.notification.NotificationMsg.NotificationMessage getMsg() {
@@ -3550,6 +4530,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public Builder setMsg(protocol.notification.NotificationMsg.NotificationMessage value) {
@@ -3566,6 +4550,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public Builder setMsg(
@@ -3580,6 +4568,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public Builder mergeMsg(protocol.notification.NotificationMsg.NotificationMessage value) {
@@ -3598,6 +4590,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public Builder clearMsg() {
@@ -3612,6 +4608,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public protocol.notification.NotificationMsg.NotificationMessage.Builder getMsgBuilder() {
@@ -3620,6 +4620,10 @@ public final class ProtoMessage {
         return getMsgFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       public protocol.notification.NotificationMsg.NotificationMessageOrBuilder getMsgOrBuilder() {
@@ -3631,6 +4635,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *通知消息
+       * </pre>
+       *
        * <code>.protocol.NotificationMessage msg = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3651,12 +4659,20 @@ public final class ProtoMessage {
       private com.google.protobuf.SingleFieldBuilderV3<
           protocol.notification.NotificationMsg.NotificationWelcome, protocol.notification.NotificationMsg.NotificationWelcome.Builder, protocol.notification.NotificationMsg.NotificationWelcomeOrBuilder> welcomeBuilder_;
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public boolean hasWelcome() {
         return welcomeBuilder_ != null || welcome_ != null;
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public protocol.notification.NotificationMsg.NotificationWelcome getWelcome() {
@@ -3667,6 +4683,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public Builder setWelcome(protocol.notification.NotificationMsg.NotificationWelcome value) {
@@ -3683,6 +4703,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public Builder setWelcome(
@@ -3697,6 +4721,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public Builder mergeWelcome(protocol.notification.NotificationMsg.NotificationWelcome value) {
@@ -3715,6 +4743,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public Builder clearWelcome() {
@@ -3729,6 +4761,10 @@ public final class ProtoMessage {
         return this;
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public protocol.notification.NotificationMsg.NotificationWelcome.Builder getWelcomeBuilder() {
@@ -3737,6 +4773,10 @@ public final class ProtoMessage {
         return getWelcomeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       public protocol.notification.NotificationMsg.NotificationWelcomeOrBuilder getWelcomeOrBuilder() {
@@ -3748,6 +4788,10 @@ public final class ProtoMessage {
         }
       }
       /**
+       * <pre>
+       *欢迎消息
+       * </pre>
+       *
        * <code>.protocol.NotificationWelcome welcome = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3843,22 +4887,25 @@ public final class ProtoMessage {
     String[] descriptorData = {
       "\n\022ProtoMessage.proto\022\010protocol\032\017ProtoHea" +
       "d.proto\032\016LoginMsg.proto\032\025NotificationMsg" +
-      ".proto\032\022KeepAliveMsg.proto\"\312\001\n\010ProtoMsg\022" +
-      " \n\004type\030\001 \001(\0162\022.protocol.EMsgHead\022\020\n\010seq" +
-      "uence\030\002 \001(\007\022\022\n\nsession_id\030\003 \001(\007\022\"\n\007reque" +
-      "st\030\004 \001(\0132\021.protocol.Request\022$\n\010response\030" +
-      "\005 \001(\0132\022.protocol.Response\022,\n\014notificatio" +
-      "n\030\006 \001(\0132\026.protocol.Notification\"`\n\007Reque" +
-      "st\022%\n\tlogin_req\030\001 \001(\0132\022.protocol.LoginRe" +
-      "q\022.\n\016keep_alive_req\030\002 \001(\0132\026.protocol.Kee" +
-      "pAliveReq\"\240\001\n\010Response\022\016\n\006result\030\001 \001(\010\022\025" +
-      "\n\rlast_response\030\002 \001(\010\022\026\n\016error_describe\030" +
-      "\003 \001(\014\022%\n\tlogin_rsp\030\004 \001(\0132\022.protocol.Logi" +
-      "nRsp\022.\n\016keep_alive_rsp\030\005 \001(\0132\026.protocol." +
-      "KeepAliveRsp\"j\n\014Notification\022*\n\003msg\030\002 \001(" +
-      "\0132\035.protocol.NotificationMessage\022.\n\007welc" +
-      "ome\030\003 \001(\0132\035.protocol.NotificationWelcome" +
-      "B\025\n\010protocol\252\002\010protocolb\006proto3"
+      ".proto\032\022KeepAliveMsg.proto\032\017SystemMsg.pr" +
+      "oto\"\312\001\n\010ProtoMsg\022 \n\004type\030\001 \001(\0162\022.protoco" +
+      "l.EMsgHead\022\020\n\010sequence\030\002 \001(\007\022\022\n\nsession_" +
+      "id\030\003 \001(\007\022\"\n\007request\030\004 \001(\0132\021.protocol.Req" +
+      "uest\022$\n\010response\030\005 \001(\0132\022.protocol.Respon" +
+      "se\022,\n\014notification\030\006 \001(\0132\026.protocol.Noti" +
+      "fication\"\222\001\n\007Request\022%\n\tlogin_req\030\001 \001(\0132" +
+      "\022.protocol.LoginReq\022.\n\016keep_alive_req\030\002 " +
+      "\001(\0132\026.protocol.KeepAliveReq\0220\n\017system_in" +
+      "fo_req\030\003 \001(\0132\027.protocol.SystemInfoReq\"\322\001" +
+      "\n\010Response\022\016\n\006result\030\001 \001(\010\022\025\n\rlast_respo" +
+      "nse\030\002 \001(\010\022\026\n\016error_describe\030\003 \001(\014\022%\n\tlog" +
+      "in_rsp\030\004 \001(\0132\022.protocol.LoginRsp\022.\n\016keep" +
+      "_alive_rsp\030\005 \001(\0132\026.protocol.KeepAliveRsp" +
+      "\0220\n\017system_info_rsp\030\006 \001(\0132\027.protocol.Sys" +
+      "temInfoRsp\"j\n\014Notification\022*\n\003msg\030\002 \001(\0132" +
+      "\035.protocol.NotificationMessage\022.\n\007welcom" +
+      "e\030\003 \001(\0132\035.protocol.NotificationWelcomeB\025" +
+      "\n\010protocol\252\002\010protocolb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3875,6 +4922,7 @@ public final class ProtoMessage {
           protocol.msg.LoginMsg.getDescriptor(),
           protocol.notification.NotificationMsg.getDescriptor(),
           protocol.msg.KeepAliveMsg.getDescriptor(),
+          protocol.msg.SystemMsg.getDescriptor(),
         }, assigner);
     internal_static_protocol_ProtoMsg_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3887,13 +4935,13 @@ public final class ProtoMessage {
     internal_static_protocol_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_Request_descriptor,
-        new String[] { "LoginReq", "KeepAliveReq", });
+        new String[] { "LoginReq", "KeepAliveReq", "SystemInfoReq", });
     internal_static_protocol_Response_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_protocol_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_Response_descriptor,
-        new String[] { "Result", "LastResponse", "ErrorDescribe", "LoginRsp", "KeepAliveRsp", });
+        new String[] { "Result", "LastResponse", "ErrorDescribe", "LoginRsp", "KeepAliveRsp", "SystemInfoRsp", });
     internal_static_protocol_Notification_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_protocol_Notification_fieldAccessorTable = new
@@ -3904,6 +4952,7 @@ public final class ProtoMessage {
     protocol.msg.LoginMsg.getDescriptor();
     protocol.notification.NotificationMsg.getDescriptor();
     protocol.msg.KeepAliveMsg.getDescriptor();
+    protocol.msg.SystemMsg.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

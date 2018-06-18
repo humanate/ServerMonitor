@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
+import protocol.ProtoMessage;
 
 import java.util.Date;
 
@@ -34,7 +35,24 @@ public class HeartBeatClientHandler extends ChannelInboundHandlerAdapter {
             ctx.flush();
         }*/
 
-        System.out.println("收到。。。。。。。。。。。");
+        System.out.println("收到"+msg.toString());
+        if (msg instanceof ProtoMessage.ProtoMsg) {
+            ProtoMessage.ProtoMsg packet = (ProtoMessage.ProtoMsg) msg;
+
+            switch (packet.getType()) {
+                case KEEP_ALIVE_RSP:
+
+                    break;
+                case LOGIN_RSP:
+
+                    break;
+                case SYSTEM_RSP:
+
+                    break;
+                default:
+                    break;
+            }
+        }
         ReferenceCountUtil.release(msg);
     }
 }

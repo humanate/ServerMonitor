@@ -36,7 +36,7 @@ public class SigarUtil {
             return null;
         }
     }
-    public static boolean isOSWin(){//OS 版本判断
+    private static boolean isOSWin(){//OS 版本判断
         String OS = System.getProperty("os.name").toLowerCase();
         if (OS.indexOf("win") >= 0) {
             return true;

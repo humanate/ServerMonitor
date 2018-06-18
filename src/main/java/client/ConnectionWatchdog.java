@@ -15,7 +15,7 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.util.Timeout;
 import io.netty.util.Timer;
 import io.netty.util.TimerTask;
-import protocol.PacketProto;
+import protocol.ProtoMessage;
 
 import java.util.concurrent.TimeUnit;
 
@@ -86,7 +86,7 @@ public abstract class ConnectionWatchdog extends ChannelInboundHandlerAdapter im
                     
                     ch.pipeline().addLast(handlers());
                     ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-                    ch.pipeline().addLast(new ProtobufDecoder(PacketProto.Packet.getDefaultInstance()));
+                    ch.pipeline().addLast(new ProtobufDecoder(ProtoMessage.ProtoMsg.getDefaultInstance()));
                     ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
                     ch.pipeline().addLast(new ProtobufEncoder());
                 }

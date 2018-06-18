@@ -1,6 +1,6 @@
 package client;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
+import com.google.protobuf.ByteString;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
@@ -17,15 +17,19 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.HashedWheelTimer;
-import protocol.PacketProto;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import protocol.ProtoMessage;
+import protocol.head.ProtoHead;
+import protocol.msg.LoginMsg;
+import protocol.msg.SystemMsg;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import static protocol.PacketProto.Packet.newBuilder;
-
 public class HeartBeatsClient {
-    
+    private static final Logger logger = LoggerFactory.getLogger(HeartBeatsClient.class);
+
     protected final HashedWheelTimer timer = new HashedWheelTimer();
     
     private Bootstrap boot;
@@ -45,7 +49,7 @@ public class HeartBeatsClient {
                     return new ChannelHandler[] {
                             this,
                             new ProtobufVarint32FrameDecoder(),
-                            new ProtobufDecoder(PacketProto.Packet.getDefaultInstance()),
+                            new ProtobufDecoder(ProtoMessage.ProtoMsg.getDefaultInstance()),
                             new ProtobufVarint32LengthFieldPrepender(),
                             new ProtobufEncoder(),
                             new IdleStateHandler(0, 4, 0, TimeUnit.SECONDS),
@@ -80,11 +84,24 @@ public class HeartBeatsClient {
                     System.out.println("发送数据包");
                     int num = random.nextInt(10);
                     Thread.sleep(num * 1000);
-                    PacketProto.Packet.Builder builder = newBuilder();
+                    ProtoMessage.ProtoMsg.Builder msg = ProtoMessage.ProtoMsg.newBuilder();
+                    msg.setType(ProtoHead.EMsgHead.SYSTEM_REQ);
+                    ProtoMessage.Request.Builder req = ProtoMessage.Request.newBuilder();
+                    /*LoginMsg.LoginReq.Builder loginReq = LoginMsg.LoginReq.newBuilder();
+                    loginReq.setUsername(ByteString.copyFromUtf8("xiaohu"));
+                    loginReq.setPassword(ByteString.copyFrom("123456".getBytes()));
+                    req.setLoginReq(loginReq);*/
+                    SystemMsg.SystemInfoReq.Builder sysReq = SystemMsg.SystemInfoReq.newBuilder();
+                    sysReq.setGetJvmInfo(true);
+                    sysReq.setGetOsInfo(true);
+                    req.setSystemInfoReq(sysReq);
+                    msg.setRequest(req);
+                    future.channel().writeAndFlush(msg.build());
+/*                    PacketProto.Packet.Builder builder = newBuilder();
                     builder.setPacketType(PacketProto.Packet.PacketType.DATA);
                     builder.setData("我是数据包（非心跳包） " + num);
                     PacketProto.Packet packet = builder.build();
-                    future.channel().writeAndFlush(packet);
+                    future.channel().writeAndFlush(packet);*/
                 }
 
             } catch (Throwable t) {
