@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package protocol;
+
+option csharp_namespace = "protocol.head";
+option java_package = "protocol.head";
+
+/**
+    消息头类型，ENUM采用大写驼峰
+*/
+enum EMsgHead{
+    LOGIN_REQ  = 0;
+    LOGIN_RSP  = 1;
+    KEEP_ALIVE_REQ = 2;
+    KEEP_ALIVE_RSP = 3;
+    SYSTEM_REQ = 4;
+    SYSTEM_RSP = 5;
+}
+

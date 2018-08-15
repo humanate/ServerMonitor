@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package protocol;
+
+option csharp_namespace = "protocol";
+option java_package = "protocol";
+
+import "ProtoHead.proto";
+import "LoginMsg.proto";
+import "NotificationMsg.proto";
+import "KeepAliveMsg.proto";
+import "SystemMsg.proto";
+
+message ProtoMsg{
+    EMsgHead type = 1;//消息头类型
+    fixed32 sequence = 2;//消息系列号，主要用于Request和Response，Response的值必须和Request相同，使得发送端可以进行事务匹配处理
+    fixed32 session_id = 3;//session的Id
+    Request request = 4;//请求类型
+    Response response = 5;//回复类型
+    Notification notification = 6;//通知类型
+}
+
+message Request
+{
+    LoginReq login_req = 1;//登录请求
+    KeepAliveReq keep_alive_req = 2;//保活请求
+    SystemInfoReq system_info_req = 3;//请求查看系统详情
+}
+
+message Response
+{
+    bool result = 1;  //true表示应答成功，false表示应答失败
+    bool last_response = 2;// 一个请求可以包含多个应答，用于指示是否为最后一个应答
+    bytes error_describe = 3;// result == false时，用于描述错误信息
+    LoginRsp login_rsp = 4;//登录回复
+    KeepAliveRsp keep_alive_rsp = 5;//保活请求
+    SystemInfoRsp system_info_rsp = 6;
+}
+
+/*与Request相同,把所有的Notification消息集合在一起当作联合体使用.*/ 
+message Notification 
+{
+    NotificationMessage msg = 2;//通知消息
+    NotificationWelcome welcome = 3;//欢迎消息
+}

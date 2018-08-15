@@ -80,7 +80,8 @@ public class HeartBeatsClient {
                 future.sync();
                 // 模拟不定时发送向服务器发送数据的过程
                 Random random = new Random();
-                while (true) {
+                boolean flag = true;
+                while (flag) {
                     System.out.println("发送数据包");
                     int num = random.nextInt(10);
                     Thread.sleep(num * 1000);
@@ -114,7 +115,7 @@ public class HeartBeatsClient {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        int port = 8080;
+        int port = 8090;
         if (args != null && args.length > 0) {
             try {
                 port = Integer.valueOf(args[0]);

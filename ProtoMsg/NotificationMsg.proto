@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protocol;
+
+option csharp_namespace = "protocol.notification";
+option java_package = "protocol.notification";
+
+message NotificationMessage
+{
+    bytes sender = 1;
+    bytes text = 2;
+    string timestamp = 3;
+}
+
+message NotificationWelcome
+{
+    bytes text = 1;
+}

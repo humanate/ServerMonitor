@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package protocol;
+
+option csharp_namespace = "protocol.msg";
+option java_package = "protocol.msg";
+/*下面定义具体的消息内容，MSG枚举中的每个消息ID，如果有消息体，则会对应一个message 定义，如果无消息体则不必要*/ 
+
+/*Login_Request 消息ID对应的消息名称为LoginRequest ； 规则为取掉下划线，有利于某些自动化编码工具编写自动化代码*/ 
+
+message LoginReq
+{
+    bytes username = 1;
+    bytes password = 2;
+}
+
+message LoginRsp
+{
+    fixed32 ttl = 1;
+}

@@ -1,0 +1,17 @@
+
+Zsquid:UselessImportCheck"6Remove this unused import 'org.hyperic.sigar.CpuInfo'.(Á±Ÿ¦
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÉÏøŸøÿÿÿÿ
+9squid:S1148Z"#Use a logger to log this exception.(ã¦“
+Wsquid:UselessImportCheck"3Remove this unused import 'server.HeartBeatServer'.(œéµ¸
+Xsquid:S3457"AFormat specifiers should be used instead of string concatenation.(šÿ¡¡
+bsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(Óã —
+Fsquid:S00108?")Either remove or fill this block of code.(äÏèŽùÿÿÿÿ
+ssquid:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(šÿ¡¡
+Asquid:S1172o"*Remove this unused method parameter "ctx".(ÛÅÍ½
+@squid:S1172c"*Remove this unused method parameter "ctx".(›Áž:
+Fsquid:S00108B")Either remove or fill this block of code.(¿ˆÜÐùÿÿÿÿ
+Asquid:S00108L")Either remove or fill this block of code.(ô‘Óˆ
+Fsquid:S00108O")Either remove or fill this block of code.(§­Ï¾ùÿÿÿÿ
+Psquid:UselessImportCheck",Remove this unused import 'utils.SigarUtil'.(âÚðÎ
+bsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(Á½èœ
+asquid:CommentedOutCodeLineq"<This block of commented-out lines of code should be removed.(Å¹E
